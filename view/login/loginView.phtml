@@ -1,0 +1,73 @@
+<br><br>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="jumbotron">
+            <h2 class="text-center">
+                <?php echo $msg; ?>
+            </h2>
+        </div>
+    </div>
+    
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+    <fieldset>
+        <form method="post">
+        
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label for="username">Usuario</label>
+                </div>
+                <div class="col-md-8">
+                    <input class="form-control" type="text" name="username" id="username" placeholder="Por eje. <?php echo $persona->fullname(); ?>">
+                    <span id="username_error" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label for="password">Contraseña</label>
+                </div>
+                <div class="col-md-8">
+                    <input class="form-control" type="password" name="password" id="password">
+                    <span id="password_error" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-offset-4 col-sm-4">
+                    <p>
+                        <button class="btn btn-primary btn-sm form-control" id="btn_login">
+                            Ingresar
+                        </button>
+                    </p>
+                </div>
+            </div>
+            
+        </form>
+    </fieldset>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <?php 
+
+            for($i=0;$i<10;$i++){
+
+                ?>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut aspernatur dolorem laborum optio quidem iusto cumque enim iste! Voluptates, iusto? Sed eum suscipit, aliquid ratione optio saepe veniam amet dolorum?</p>
+                <?php
+
+            }
+
+        ?>
+    </div>
+</div>
