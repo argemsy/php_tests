@@ -22,7 +22,17 @@
 <div class="row">
     <div class="col-lg-4 offset-lg-4">
         <h4>
-            <a href="<?php echo Link::path() . '?accion=login'  ?>">Login</a>
+            <ul class="menu">
+                <li>
+                <a href="<?php echo Link::path() . '?accion=login'  ?>">Login</a>
+                </li>
+                <li>
+                <a href="<?php echo Link::path() . '?accion=table-json'  ?>">Response Json</a>
+                </li>
+                <li>
+                <a href="<?php echo Link::path() . '?accion=table'  ?>">Consult</a>
+                </li>
+            </ul>
         </h4>
     </div>
 </div>

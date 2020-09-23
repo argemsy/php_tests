@@ -1,23 +1,26 @@
-<?php 
+<?php session_start();
 
 
 class Link {
 
-    static public function path(){
+    static function path(){
         return 'http://localhost/';
 
     }
 
-    static public function autoload()
+    static function autoload()
     {
         spl_autoload_register(function($class){
             include 'model/'.$class.'.php';
         });
     }
 
-    static public function mvc()
+    static function mvc()
+
+
     {
-        !empty(Request::get_controller()) ? $accion = Request::get_controller() : $accion = 'index';
+        $accion = $_REQUEST['accion'];
+        !empty($accion) ? $accion = $accion : $accion = 'index';
 
 
         is_file('controller/'.$accion.'/'.$accion.'Controller.php') ? include 'controller/'.$accion.'/'.$accion.'Controller.php' : include 'controller/error/errorController.php' ;

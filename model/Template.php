@@ -1,5 +1,4 @@
 <?php 
-require 'Link.php';
 
 class Template {
 
@@ -22,6 +21,7 @@ class Template {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title><?php echo $this->title .' | '. $this->sub_title; ?></title>
             <link rel="stylesheet" href="<?php echo Link::path() . 'staticfiles/css/bootstrap.min.css'; ?>">
+            <link rel="stylesheet" href="<?php echo Link::path() . 'staticfiles/node_modules/datatables/media/css/jquery.dataTables.min.css'; ?>">
 
         </head>
         <body>

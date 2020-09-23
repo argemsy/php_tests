@@ -2,36 +2,37 @@
 
 class Request
 {
-    static private $controller, $method, $args;
+	private $controlador,$metodo,$argumento;
+	public function __construct()
+	{
+		$url = array();
+		if(isset($_REQUEST['accion'])){
+			$url = explode("/", strtolower($_REQUEST['accion']));
+		}
+		$this->controlador = array_shift($url);
+		$this->metodo = array_shift($url);
+		$this->argumento = array_shift($url);
+		
+	}
 
-    public function __construct()
-    {
-        $url = array();
+	public function controlador()
+	{
+		return $this->controlador;
+	}
+		
+	public function metodo()
+	{
+		return $this->metodo;
+	}
+		
+	public function argumento()
+	{
+		return $this->argumento;
+	}
+	
 
-        if(isset($_REQUEST['accion'])){
-            $direccion = strtolower($_REQUEST['accion']);
-        }
-        $url = explode("/",$direccion);
-        self::$controller = array_shift($url);
-        self::$method = array_shift($url);
-        self::$args = array_shift($url);
-    }
-
-    static public function get_controller()
-    {
-        return self::$controller;
-    }
-
-    static public function get_method()
-    {
-        return self::$method;
-    }
-
-    static public function get_args()
-    {
-        return self::$args;
-    }
 }
+
 
 
 ?>
