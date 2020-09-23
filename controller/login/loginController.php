@@ -9,8 +9,11 @@ $tmp->listCss = [
 ];
 
 // Javascript
+
 $tmp->listJs = [
     'staticfiles/node_modules/axios/dist/axios.min.js',
+    'staticfiles/scripts/class.js',
+    'staticfiles/scripts/login.js',
 ];
 
 

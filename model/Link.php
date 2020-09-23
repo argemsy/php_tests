@@ -19,10 +19,11 @@ class Link {
 
 
     {
-        $accion = $_REQUEST['accion'];
+        // Declaramos las peticiones
+        $peticion = new Request();
+        $accion = $peticion->controlador();
+        // Lógica de peticiones
         !empty($accion) ? $accion = $accion : $accion = 'index';
-
-
         is_file('controller/'.$accion.'/'.$accion.'Controller.php') ? include 'controller/'.$accion.'/'.$accion.'Controller.php' : include 'controller/error/errorController.php' ;
     
     
