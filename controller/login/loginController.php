@@ -3,11 +3,6 @@ $tmp = new Template('Login de Usuarios');
 
 $persona = new Persona('Argenis','Vargas', 34);
 
-// CSS
-$tmp->listCss = [
-    'axios.min.css',
-];
-
 // Javascript
 
 $tmp->listJs = [

@@ -22,7 +22,7 @@ class Template {
             <title><?php echo $this->title .' | '. $this->sub_title; ?></title>
             <link rel="stylesheet" href="<?php echo Link::path() . 'staticfiles/css/bootstrap.min.css'; ?>">
             <link rel="stylesheet" href="<?php echo Link::path() . 'staticfiles/node_modules/datatables/media/css/jquery.dataTables.min.css'; ?>">
-
+            
         </head>
         <body>
             <div class="container">
@@ -32,17 +32,6 @@ class Template {
         <?php
 
 
-    }
-
-
-
-    private function loadCss(){
-        $lista = $this->listCss;
-        for($i=0;$i<count($lista);$i++){
-            ?>
-            <link rel="stylesheet" href="<?php echo Link::path() . $lista[$i]; ?>">
-            <?php
-        }
     }
 
     private function loadJs(){

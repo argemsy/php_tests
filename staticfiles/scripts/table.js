@@ -1,5 +1,6 @@
 
 
+
 callbackTable = () => {
     var url = 'table-json/';
 
@@ -25,6 +26,6 @@ $(document).ready(function(){
 
 
     callbackTable();
-
+    
 
 })

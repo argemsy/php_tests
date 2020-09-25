@@ -36,3 +36,11 @@ var ClassJs = function(color='primary'){
 
 
 }
+
+
+// ESTO SE APLICA A TODOS LOS HTML QUE TENGAN UN DIV CON UN ID REDIRECT
+redirectLink = (path='/',label="Menú principal") => {
+    return (`<a href="${path}" title="${label}">${label}</a>`);
+}
+
+$("#redirect").empty().append(redirectLink());
