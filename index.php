@@ -1,5 +1,5 @@
 <?php 
-include 'model/Link.php';
+include 'l/Link.php';
 
 
 Link::autoload();
