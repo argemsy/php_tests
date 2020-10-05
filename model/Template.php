@@ -2,7 +2,7 @@
 
 class Template {
 
-    private $title = 'Admin Site';
+    private $title = 'Arge Site';
     public $sub_title = '';
     public $listJs = array();
     public $listCss = array();

@@ -8,16 +8,14 @@ class Link {
 
     }
 
-    static function autoload()
+    static function autoload()// metodo
     {
-        spl_autoload_register(function($class){
+        spl_autoload_register(function($class){ // funcion
             include 'model/'.$class.'.php';
         });
     }
 
     static function mvc()
-
-
     {
         // Declaramos las peticiones
         $peticion = new Request();

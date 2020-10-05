@@ -5,6 +5,6 @@ Link::autoload();
 
 Link::mvc();
 
-// Database::connection();
+Database::connection();
 
 ?>

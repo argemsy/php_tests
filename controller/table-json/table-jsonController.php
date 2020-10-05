@@ -1,6 +1,5 @@
 <?php 
 
-
 $table = [
     'data'=>[
         [
@@ -36,6 +35,7 @@ $table = [
 
 header('Content-Type: application/json');
 $json = json_encode($table);
+
 echo $json;
 
 ?>

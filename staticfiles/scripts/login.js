@@ -8,16 +8,30 @@ chargeTemplate = () =>{
     $content += login.input('Password','password','password');
     $content += login.Btn('Ingresar','btn_login');
 
-    $("form").empty().append($content);
+    $("#formulario").empty().append($content);
 
 }
 
+
+login = () => {
+
+    axios.post('/login/',{}).then((response)=>{
+        if(response.status == 200)
+        {
+            setTimeout(function(){
+                location.href = "/blog"
+            })
+        }
+    })
+
+}
 
 
 $("#btn_login").on('click',function(e){
     e.preventDefault();
 
     var $username = $("#username").val();
+    console.log($username);
     alert($username);
 
 })
