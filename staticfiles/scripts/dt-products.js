@@ -11,12 +11,13 @@ callbackTable = () => {
                 data:$data,
                 destroy:true,
                 responsive:true,
-
+                order:[[0,'desc']],
                 columns:[
-                    {data:'id'},
-                    {data:'name',className:'text-primary'},
+                    {data:'id',className:'text-center'},
+                    {data:'name',className:'text-success'},
                     {data:'description'},
-                    {data:'category_'},
+                    {data:'category_',className:'text-center'},
+                    {data:'username',className:'text-primary text-center'},
                 ]
             })
 

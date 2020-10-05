@@ -3,7 +3,9 @@
 
 class Database {
 
-
+	static private $fields = 'name,description,category';
+	static private $values = ':name,:description,:category';
+	
 	static function connection()
 	{
 
@@ -31,6 +33,24 @@ class Database {
 		$query->execute(array(":x"=>$condicion));
 		return $query;
 	}
+
+    static public function Insertar($table,$obj) {
+
+		$sql = "insert into ".$table."(".self::$fields.")values(".self::$values.")";
+		$stmt = self::connection()->prepare($sql);
+
+		$fields = explode(',',self::$values);
+		$values = explode(',',$obj);
+
+		for($i=0;$i<count($obj);$i++){
+			$stmt->bindValue($fields[$i], $obj[$i]);
+		}
+			
+
+        // execute the insert statement
+        $stmt->execute();
+        
+    }
 
 
 
