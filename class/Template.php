@@ -22,7 +22,9 @@ class Template {
             <title><?php echo $this->title .' | '. $this->sub_title; ?></title>
             <link rel="stylesheet" href="<?php echo Link::path() . 'staticfiles/css/bootstrap.min.css'; ?>">
             <link rel="stylesheet" href="<?php echo Link::path() . 'staticfiles/node_modules/datatables/media/css/jquery.dataTables.min.css'; ?>">
-            
+            <link rel="stylesheet" href="<?php echo Link::path() . 'staticfiles/node_modules/select2/dist/css/select2.min.css'; ?>">
+        
+        
         </head>
         <body>
             <div class="container">

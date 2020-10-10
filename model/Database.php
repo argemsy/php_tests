@@ -3,9 +3,18 @@
 
 class Database {
 
-	static private $fields = 'name,description,category';
-	static private $values = ':name,:description,:category';
+	static private $fields = 'name,description,category,username';
+	static private $values = ':name,:description,:category,:username';
 	
+
+
+	static function createTable($table_name,$fields){
+		
+		$fields = 'id serial primary key,name varchar(50) not null,description varchar (255)';
+
+		$sql = 'create table '.$table_name. '('.$fields.')';
+	}
+
 	static function connection()
 	{
 
@@ -20,38 +29,22 @@ class Database {
 
     }
 
-	static public function simpleQuery($sql)
+	static public function listQuery($sql)
 	{
+		// Lista las tablas de manera generica, este metodo recibe una consulta sql.
 		$query = self::connection()->query($sql);
 		$rows = $query->fetchAll(PDO::FETCH_ASSOC);
 		return $rows;
     }
     
-	static public function EspecificQuery($sql,$condicion)
+	static public function retrieveQuery($sql,$condicion)
 	{
+		// lista el detalle de un objeto dentro de una tabla, recibe 2 parametros
+		// el sql y el identificador de la condicion where
 		$query = self::connection()->prepare($sql);
 		$query->execute(array(":x"=>$condicion));
 		return $query;
 	}
-
-    static public function Insertar($table,$obj) {
-
-		$sql = "insert into ".$table."(".self::$fields.")values(".self::$values.")";
-		$stmt = self::connection()->prepare($sql);
-
-		$fields = explode(',',self::$values);
-		$values = explode(',',$obj);
-
-		for($i=0;$i<count($obj);$i++){
-			$stmt->bindValue($fields[$i], $obj[$i]);
-		}
-			
-
-        // execute the insert statement
-        $stmt->execute();
-        
-    }
-
 
 
 }

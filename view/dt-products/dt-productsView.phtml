@@ -18,8 +18,16 @@
 <br>
 <br>
 
+
 <div class="row">
+    
     <div class="col-sm-offset-1 col-sm-10">
+        <a  
+            title="Nuevo Producto"
+            onclick="return loadModal()"
+            href="javascript:void(0)"
+            class="btn btn-sm btn-success">Nuevo Producto</a>
+        <br><br>
 
         <table id="table" class="table table-stripped table-border nowrap" style="width:100%">
             <thead>
@@ -29,11 +37,16 @@
                     <th>Descripción</th>
                     <th>Categoria</th>
                     <th>Usuario</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
         </table>
         <br>
         <br>
     </div>
+</div>
+
+<div class="modal" id="modalBody" tabindex="-1" role="dialog">
+
 </div>
 

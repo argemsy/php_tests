@@ -12,6 +12,7 @@ class Link {
     {
         spl_autoload_register(function($class){ // funcion
             include 'model/'.$class.'.php';
+            include 'class/'.$class.'.php';
         });
     }
 
@@ -20,6 +21,7 @@ class Link {
         // Declaramos las peticiones
         $peticion = new Request();
         $accion = $peticion->controlador();
+        
         // Lógica de peticiones
         !empty($accion) ? $accion = $accion : $accion = 'index';
         is_file('controller/'.$accion.'/'.$accion.'Controller.php') ? include 'controller/'.$accion.'/'.$accion.'Controller.php' : include 'controller/error/errorController.php' ;

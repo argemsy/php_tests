@@ -1,10 +1,10 @@
 <?php 
-include 'model/Link.php';
+include 'class/Link.php';
 
 Link::autoload();
 
 Link::mvc();
 
-// Database::connection();
+
 
 ?>

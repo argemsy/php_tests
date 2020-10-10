@@ -4,15 +4,17 @@
 
 // VISTAS POSTGRES
 
-// Vista para tener asociado en un query las categorias y los usuarios
+// Vista de productos para tener asociado en un query las categorias y los usuarios
 // y poder verlo en forma comprensible
 $products_all = "create or replace view products_all as
                 SELECT 
                 p.id, 
                 p.name, 
                 p.description, 
-                c.name AS category_, 
-                u.first_name || ' ' || u.last_name as username 
+                c.name AS category_,
+                c.id AS category_id, 
+                u.first_name || ' ' || u.last_name as username,
+                u.id as username_id 
                 FROM 
                 product p JOIN category c 
                 ON p.category = c.id 
