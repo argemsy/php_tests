@@ -1,7 +1,7 @@
 <?php 
 $tmp = new Template('Login de Usuarios');
 
-$persona = new Persona('Argenis','Vargas', 34);
+$persona = new Auth_User('Argenis','Vargas', 34);
 
 // Javascript
 
