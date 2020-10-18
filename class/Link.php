@@ -4,8 +4,7 @@
 class Link {
 
     static function path(){
-        return 'http://localhost/';
-
+        return 'http://php.com/';
     }
 
     static function autoload()// metodo
@@ -24,8 +23,8 @@ class Link {
         
         // Lógica de peticiones
         !empty($accion) ? $accion = $accion : $accion = 'index';
+
         is_file('controller/'.$accion.'/'.$accion.'Controller.php') ? include 'controller/'.$accion.'/'.$accion.'Controller.php' : include 'controller/error/errorController.php' ;
-    
     
     }
 

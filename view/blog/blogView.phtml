@@ -40,35 +40,11 @@
         </center>
         <hr>
         <ul>
+        <?php for($i=0;$i<25;$i++){
+        ?>
             <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
-            <li><a href="javascript:void(0)">Menú ...</a></li>
+        <?php }?>
+            
         </ul>
     </div>
     
@@ -97,21 +73,15 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4">
-                <img src="/staticfiles/imgs/php.jpg" class="img-responsive" alt="">
-                <hr>
-                <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque explicabo ipsam odit ex, fuga esse eligendi! Sint labore, placeat architecto fugiat laudantium quam id accusantium nobis voluptatibus voluptate molestias voluptates!</p>
-            </div>
-            <div class="col-md-4">
-                <img src="/staticfiles/imgs/php.jpg" class="img-responsive" alt="">
-                <hr>
-                <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque explicabo ipsam odit ex, fuga esse eligendi! Sint labore, placeat architecto fugiat laudantium quam id accusantium nobis voluptatibus voluptate molestias voluptates!</p>
-            </div>
-            <div class="col-md-4">
-                <img src="/staticfiles/imgs/php.jpg" class="img-responsive" alt="">
-                <hr>
-                <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque explicabo ipsam odit ex, fuga esse eligendi! Sint labore, placeat architecto fugiat laudantium quam id accusantium nobis voluptatibus voluptate molestias voluptates!</p>
-            </div>
+        
+            <?php for($i=0;$i<3;$i++){ ?>
+                <div class="col-md-4">
+                    <img src="/staticfiles/imgs/php.jpg" class="img-responsive" alt="">
+                    <hr>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque explicabo ipsam odit ex, fuga esse eligendi! Sint labore, placeat architecto fugiat laudantium quam id accusantium nobis voluptatibus voluptate molestias voluptates!</p>
+                </div>
+            <?php } ?>
+            
         </div>
 
         <div class="row">
